@@ -2,10 +2,14 @@ import React, {Component} from 'react'
 
 export default class Login extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
+
+        const search = props.location.search;
+        const params = new URLSearchParams(search);
+
         this.state = {
-            msg: ''
+            msg: params.get('msg')
         }
 
         this.enviarDados = this.enviarDados.bind(this)

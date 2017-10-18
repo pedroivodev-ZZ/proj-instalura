@@ -17,7 +17,7 @@ ReactDOM.render(
         <div>
         {/* <App> */}
             <Route exact path="/" component={Login} />
-            <Route path="/timeline" component={App} />
+            <Route path="/timeline/:user?" component={App} />
         {/* </App> */}
         </div>
     </Router>

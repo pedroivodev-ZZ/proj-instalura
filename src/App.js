@@ -7,8 +7,8 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        <Header />
-        <Timeline />
+        <Header history={this.props.history} />
+        <Timeline history={this.props.history} />
       </div>
     );
   }

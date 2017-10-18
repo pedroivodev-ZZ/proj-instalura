@@ -3,8 +3,11 @@ import Foto from './Foto'
 
 export default class Timeline extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
+        if (localStorage.getItem('auth-token') === null) {
+            this.props.history.replace('/?msg=É necessário login para a timeline')
+        }
 
         this.state = {
             fotos: []
